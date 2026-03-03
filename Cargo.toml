@@ -1,0 +1,26 @@
+[package]
+name = "shiguredo_cmake"
+version = "4.2.3"
+edition = "2024"
+rust-version = "1.88"
+authors = ["Shiguredo Inc."]
+license = "Apache-2.0"
+description = "Download and cache prebuilt CMake binaries from official GitHub releases"
+homepage = "https://github.com/shiguredo/cmake-rs"
+repository = "https://github.com/shiguredo/cmake-rs"
+readme = "README.md"
+include = ["/src/**", "/build.rs", "LICENSE", "README.md"]
+
+[[bin]]
+name = "cmake"
+path = "src/main.rs"
+
+[dependencies]
+cmake = "0.1"
+sha2 = "0.10"
+
+[build-dependencies]
+shiguredo_toml = "2026.1.0"
+
+[package.metadata.external-dependencies]
+cmake = { version = "4.2.3" }
