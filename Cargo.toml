@@ -17,7 +17,6 @@ path = "src/main.rs"
 
 [dependencies]
 cmake = "0.1"
-sha2 = "0.10"
 
 [build-dependencies]
 shiguredo_toml = "2026.1.0"

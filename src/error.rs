@@ -18,6 +18,13 @@ pub enum Error {
         url: String,
         status: std::process::ExitStatus,
     },
+    /// SHA256 コマンドの実行に失敗
+    Sha256 { path: PathBuf, source: io::Error },
+    /// SHA256 コマンドが非ゼロで終了
+    Sha256Failed {
+        path: PathBuf,
+        status: std::process::ExitStatus,
+    },
     /// SHA256 チェックサムの不一致
     ChecksumMismatch { expected: String, actual: String },
     /// アーカイブ展開に失敗
@@ -51,6 +58,16 @@ impl fmt::Display for Error {
             Self::DownloadFailed { url, status } => {
                 write!(f, "download failed for {url}: {status}")
             }
+            Self::Sha256 { path, source } => {
+                write!(
+                    f,
+                    "failed to compute SHA256 for {}: {source}",
+                    path.display()
+                )
+            }
+            Self::Sha256Failed { path, status } => {
+                write!(f, "SHA256 command failed for {}: {status}", path.display())
+            }
             Self::ChecksumMismatch { expected, actual } => {
                 write!(
                     f,
@@ -73,6 +90,7 @@ impl std::error::Error for Error {
         match self {
             Self::CacheDir { source, .. }
             | Self::Download { source, .. }
+            | Self::Sha256 { source, .. }
             | Self::Extract { source, .. } => Some(source),
             Self::Io(source) => Some(source),
             _ => None,
