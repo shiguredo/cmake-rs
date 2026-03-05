@@ -27,7 +27,7 @@ pub fn download(url: &str, output: &Path) -> Result<(), Error> {
 
 /// システムコマンドでファイルの SHA256 チェックサムを検証する
 ///
-/// Linux: sha256sum, macOS: shasum -a 256, Windows: PowerShell Get-FileHash
+/// Linux: sha256sum, macOS: shasum -a 256, Windows: certutil -hashfile
 pub fn verify_sha256(path: &Path, expected: &str) -> Result<(), Error> {
     let output = sha256_command(path).map_err(|e| Error::Sha256 {
         path: path.to_owned(),
@@ -62,12 +62,10 @@ fn sha256_command(path: &Path) -> Result<std::process::Output, std::io::Error> {
             .arg(path)
             .output()
     } else if cfg!(target_os = "windows") {
-        Command::new("powershell")
-            .args(["-NoProfile", "-Command"])
-            .arg(format!(
-                "(Get-FileHash -Algorithm SHA256 '{}').Hash",
-                path.display()
-            ))
+        Command::new("certutil")
+            .args(["-hashfile"])
+            .arg(path)
+            .arg("SHA256")
             .output()
     } else {
         Command::new("sha256sum").arg(path).output()
@@ -77,11 +75,16 @@ fn sha256_command(path: &Path) -> Result<std::process::Output, std::io::Error> {
 /// SHA256 コマンドの出力からハッシュ値を取り出す
 ///
 /// shasum / sha256sum: "<hash>  <filename>"
-/// PowerShell Get-FileHash: "<HASH>\r\n" (大文字)
+/// certutil: "SHA256 hash of <path>:\n<hash>\nCertUtil: ..."
 fn parse_sha256_output(stdout: &str) -> String {
     if cfg!(target_os = "windows") {
-        // PowerShell の出力は大文字なので小文字に変換する
-        stdout.trim().to_ascii_lowercase()
+        // certutil の出力は 2 行目がハッシュ値（スペース区切りの場合があるので除去する）
+        stdout
+            .lines()
+            .nth(1)
+            .unwrap_or("")
+            .replace(' ', "")
+            .to_ascii_lowercase()
     } else {
         // shasum / sha256sum はハッシュの後にスペースとファイル名が続く
         stdout.split_whitespace().next().unwrap_or("").to_owned()
