@@ -17,6 +17,9 @@
 
 - [UPDATE] cmake 4.3.0 に上げる
   - @voluntas
+- [CHANGE] SHA256 ハッシュ値を `Cargo.toml` の `[package.metadata.external-dependencies.cmake.sha256]` で管理するように変更する
+  - @voluntas
+
 - [CHANGE] SHA256 チェックサム検証を `sha2` クレートからシステムコマンドに置き換える
   - Linux: `sha256sum`, macOS: `shasum -a 256`, Windows: PowerShell `Get-FileHash`
   - `sha2` クレートとその依存 8 クレートを削除する

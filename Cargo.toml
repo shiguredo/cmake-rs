@@ -21,5 +21,12 @@ cmake = "0.1"
 [build-dependencies]
 shiguredo_toml = "2026.1.0"
 
-[package.metadata.external-dependencies]
-cmake = { version = "4.3.0" }
+[package.metadata.external-dependencies.cmake]
+version = "4.3.0"
+
+[package.metadata.external-dependencies.cmake.sha256]
+macos-universal = "816f62d02acc527d8cac380007a30b9ff6a62dba6b9ca48a68c68df233871560"
+linux-x86_64 = "201bdabe17a54e017f119cffa247648e9c44327e52473c2cc60a88fded94652a"
+linux-aarch64 = "26fe3011f497eb9398115dcabcc094685e634b1841f7c01dc01c5a89b8b0ea0d"
+windows-x86_64 = "0f664f44eeb5b35b77f83e0984459c0dfa70539bd215c54ae1059604fd4f77ea"
+windows-arm64 = "174cdb8a877ce9d27ce2e7bd5ed74e48b333fb87b82ed7962c6c2325d35065e1"
