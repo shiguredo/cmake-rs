@@ -11,6 +11,12 @@
 
 ## develop
 
+## 4.3.0
+
+**リリース日**: 2026-03-18
+
+- [UPDATE] cmake 4.3.0 に上げる
+  - @voluntas
 - [CHANGE] SHA256 チェックサム検証を `sha2` クレートからシステムコマンドに置き換える
   - Linux: `sha256sum`, macOS: `shasum -a 256`, Windows: PowerShell `Get-FileHash`
   - `sha2` クレートとその依存 8 クレートを削除する
@@ -18,7 +24,7 @@
 
 ## 4.2.3
 
-**リリース日**: 未定
+**リリース日**: 2026-03-03
 
 - [ADD] CMake プリビルトバイナリのダウンロードとキャッシュ機能を追加する
   - Kitware 公式 GitHub Releases からプリビルトバイナリを自動取得する
