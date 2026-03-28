@@ -11,11 +11,9 @@
 
 ## develop
 
-## 4.3.1
-
-**リリース日**: 2026-03-28
-
 - [UPDATE] cmake 4.3.1 に上げる
+  - @voluntas
+- [FIX] macOS 用アーカイブ名を `macos10.10-universal` から `macos-universal` に修正する
   - @voluntas
 
 ## 4.3.0

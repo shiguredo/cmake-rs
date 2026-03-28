@@ -22,7 +22,7 @@ pub fn detect() -> Result<PlatformInfo, Error> {
 
     let (archive_suffix, sha256, cmake_relative_path, target) = match (os, arch) {
         ("macos", "x86_64" | "aarch64") => (
-            format!("cmake-{version}-macos10.10-universal.tar.gz"),
+            format!("cmake-{version}-macos-universal.tar.gz"),
             env!("SHIGUREDO_CMAKE_SHA256_MACOS_UNIVERSAL"),
             "CMake.app/Contents/bin/cmake",
             "macos-universal",
