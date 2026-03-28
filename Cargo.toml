@@ -1,6 +1,6 @@
 [package]
 name = "shiguredo_cmake"
-version = "4.3.0"
+version = "4.3.1"
 edition = "2024"
 rust-version = "1.88"
 authors = ["Shiguredo Inc."]
@@ -22,11 +22,11 @@ cmake = "0.1"
 shiguredo_toml = "2026.1.0"
 
 [package.metadata.external-dependencies.cmake]
-version = "4.3.0"
+version = "4.3.1"
 
 [package.metadata.external-dependencies.cmake.sha256]
-macos-universal = "816f62d02acc527d8cac380007a30b9ff6a62dba6b9ca48a68c68df233871560"
-linux-x86_64 = "201bdabe17a54e017f119cffa247648e9c44327e52473c2cc60a88fded94652a"
-linux-aarch64 = "26fe3011f497eb9398115dcabcc094685e634b1841f7c01dc01c5a89b8b0ea0d"
-windows-x86_64 = "0f664f44eeb5b35b77f83e0984459c0dfa70539bd215c54ae1059604fd4f77ea"
-windows-arm64 = "174cdb8a877ce9d27ce2e7bd5ed74e48b333fb87b82ed7962c6c2325d35065e1"
+macos-universal = "c21fe4ade82a6a236aae0b9fbd8263c7ac6824a3fb32d03594456e30b06f3b7f"
+linux-x86_64 = "208d76804009cbe8ec9aea0aa052c857c6e59bd289b43b9941c99324dc78b1d8"
+linux-aarch64 = "2c0eca48ac7d0e3a8b4120b801d48903b0630c8ff1e73c44a90398a300dec1ac"
+windows-x86_64 = "03a610be931546474e46a442d171ef10532f4fc847de9cf76b7a8065bbef6a23"
+windows-arm64 = "e8aac0daf1c34f4752e9705cfe3d926a10cd42ead76d67b9cf7265c21c2cc705"
