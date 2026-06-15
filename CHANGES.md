@@ -9,7 +9,7 @@
 - FIX
   - バグ修正
 
-## develop
+## main
 
 - [UPDATE] cmake 4.3.3 に上げる
   - @voluntas
