@@ -24,11 +24,11 @@ PyPI の [cmake](https://pypi.org/project/cmake/) パッケージを参考にし
 
 ## 特徴
 
-- CMake バージョンは `Cargo.toml` の `[package.metadata.external-dependencies]` で管理
+- CMake バージョンと SHA256 ハッシュは `Cargo.toml` の `[package.metadata.external-dependencies.cmake]` で管理
 - 初回呼び出し時にプリビルトバイナリを自動ダウンロード
 - SHA256 チェックサムによる検証
 - `$HOME/.cache/shiguredo_cmake/` 以下にキャッシュ (2 回目以降はダウンロード不要)
-- ダウンロードは `curl`、展開は `tar` コマンドを使用し依存を最小化
+- ダウンロード・展開・SHA256 検証はシステムコマンド (`curl`、`tar`、`sha256sum` / `shasum` / `certutil`) を使用し依存を最小化
 - [cmake](https://crates.io/crates/cmake) クレートの `Config` API をそのまま利用可能
 - macOS / Linux / Windows 対応
 
@@ -43,8 +43,12 @@ PyPI の [cmake](https://pypi.org/project/cmake/) パッケージを参考にし
 ## 必要な環境
 
 - Rust 1.88 以上
-- `curl` コマンド
-- `tar` コマンド
+- `curl` コマンド (ダウンロード)
+- `tar` コマンド (展開、`.tar.gz` と `.zip` 両対応)
+- SHA256 検証コマンド
+  - Linux: `sha256sum`
+  - macOS: `shasum`
+  - Windows: `certutil`
 
 ## コマンドとしての使用
 
