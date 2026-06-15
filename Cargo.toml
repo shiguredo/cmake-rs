@@ -3,23 +3,12 @@ name = "shiguredo_cmake"
 version = "4.3.2"
 edition = "2024"
 rust-version = "1.88"
-authors = ["Shiguredo Inc."]
-license = "Apache-2.0"
 description = "Download and cache prebuilt CMake binaries from official GitHub releases"
+readme = "README.md"
 homepage = "https://github.com/shiguredo/cmake-rs"
 repository = "https://github.com/shiguredo/cmake-rs"
-readme = "README.md"
-include = ["/src/**", "/build.rs", "LICENSE", "README.md"]
-
-[[bin]]
-name = "cmake"
-path = "src/main.rs"
-
-[dependencies]
-cmake = "0.1"
-
-[build-dependencies]
-shiguredo_toml = "2026.1"
+license = "Apache-2.0"
+include = ["/build.rs", "/src/**", "LICENSE", "README.md"]
 
 [package.metadata.external-dependencies.cmake]
 version = "4.3.2"
@@ -30,3 +19,13 @@ linux-x86_64 = "791ae3604841ca03cb3889a3ad89165346e4b180ae3448efd4b0caa9ef46d245
 linux-aarch64 = "377079ab739f5765176f427609d9a2015b756ea20d5cba908d279c3731a2f481"
 windows-x86_64 = "83d20c23f5c5f64b3b328785e35b23c532e33057a97ed6294acaca3781b78a01"
 windows-arm64 = "42a2a88fc57e70d04a92f6eaaac2094241995f53584bc2afdae7e6ef982b3781"
+
+[[bin]]
+name = "cmake"
+path = "src/main.rs"
+
+[dependencies]
+cmake = "0.1"
+
+[build-dependencies]
+shiguredo_toml = "2026.2"
