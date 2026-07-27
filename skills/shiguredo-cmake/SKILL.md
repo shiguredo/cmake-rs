@@ -18,7 +18,7 @@ CMake の公式プリビルトバイナリを Kitware 公式 GitHub Releases か
 
 ## 必要な環境
 
-- Rust 1.88 以上
+- Rust 1.93 以上
 - `curl` (ダウンロード)
 - `tar` (展開、`.tar.gz` と `.zip` 両対応、Windows 10+ は内蔵 tar で OK)
 - SHA256 検証コマンド

@@ -11,6 +11,9 @@
 
 ## main
 
+- [CHANGE] MSRV (rust-version) を 1.93 に上げる
+  - @voluntas
+
 ## 4.4.0
 
 **リリース日**: 2026-07-11

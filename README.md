@@ -42,7 +42,7 @@ PyPI の [cmake](https://pypi.org/project/cmake/) パッケージを参考にし
 
 ## 必要な環境
 
-- Rust 1.88 以上
+- Rust 1.93 以上
 - `curl` コマンド (ダウンロード)
 - `tar` コマンド (展開、`.tar.gz` と `.zip` 両対応)
 - SHA256 検証コマンド
