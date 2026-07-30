@@ -1,6 +1,6 @@
 [package]
 name = "shiguredo_cmake"
-version = "4.4.0"
+version = "4.4.1"
 edition = "2024"
 rust-version = "1.93"
 description = "Download and cache prebuilt CMake binaries from official GitHub releases"
@@ -11,14 +11,14 @@ license = "Apache-2.0"
 include = ["/build.rs", "/src/**", "LICENSE", "README.md"]
 
 [package.metadata.external-dependencies.cmake]
-version = "4.4.0"
+version = "4.4.1"
 
 [package.metadata.external-dependencies.cmake.sha256]
-macos-universal = "09d6382059aa1b986b25fd1809459f5eb3da6a1ab342d44d6084265f38541397"
-linux-x86_64 = "3864eb649b4466ae126a64bbde1657adad78efbbaa068bf38201de5cf1b5349f"
-linux-aarch64 = "e98bb53e0b00a8f672424517d34c05bb9b94fd1c888c89e0b81bc8df51d1a94b"
-windows-x86_64 = "156d70eb7625a7b469444df7d0861d2af8d5d0a437fce32c350372b08f5620e8"
-windows-arm64 = "57437e918b2929bbd25b8d427611120149df02d4b216872e0f48f361f03d71e5"
+macos-universal = "2425c063fefd6869366e77ae0ac0333233eee00eb05581bac89e204b357e939c"
+linux-x86_64 = "c2e2994ee4a5573899e6a774d2c16cb878a47e97a562854bb72159b21b9347ea"
+linux-aarch64 = "91442e0e97cdf2531eac4ddcaac1fdf7b20dd8ebf0bebd89bf12f82b2818071e"
+windows-x86_64 = "091919e1cde162b69d2d5e0f3b1f5670c973e72133f78126fbb18042947d6f19"
+windows-arm64 = "dc59d9f377f891b8da42ede22f53717034a9d093092fceaf6297feeec6afba29"
 
 [[bin]]
 name = "cmake"

@@ -13,6 +13,8 @@
 
 - [CHANGE] MSRV (rust-version) を 1.93 に上げる
   - @voluntas
+- [UPDATE] cmake 4.4.1 に上げる
+  - @voluntas
 
 ## 4.4.0
 
