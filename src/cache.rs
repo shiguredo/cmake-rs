@@ -1,3 +1,5 @@
+//! ダウンロードした CMake を置くキャッシュディレクトリの解決と作成を行う。
+
 use std::path::{Path, PathBuf};
 
 use crate::error::Error;

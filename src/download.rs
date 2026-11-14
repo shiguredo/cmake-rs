@@ -1,3 +1,5 @@
+//! `curl` によるダウンロードと、システムコマンドによる SHA256 の検証を行う。
+
 use std::path::Path;
 use std::process::Command;
 

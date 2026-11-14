@@ -1,9 +1,19 @@
+//! CMake の公式プリビルトバイナリをダウンロードしてキャッシュするクレート。
+//!
+//! [`build`] または [`set_cmake_env`] を `build.rs` から呼ぶと、`CMAKE` 環境変数に
+//! キャッシュ済みの CMake バイナリのパスを設定する。キャッシュにバイナリがない場合は
+//! Kitware 公式の GitHub Releases からダウンロードし、SHA256 を検証してから展開する。
+
 mod archive;
 mod cache;
 mod download;
 mod error;
 mod platform;
 
+// クレートのドロップイン代替という役割上、利用側が `cmake` クレートへの直接依存を
+// 追加せずに `Config` を使える必要がある。依存元が分かりにくくなる re-export は
+// 規約で避けることになっているが、この用途に限り例外として行う。
+// README と skills/shiguredo-cmake/SKILL.md でも案内している公開 API である。
 pub use cmake::Config;
 pub use error::Error;
 

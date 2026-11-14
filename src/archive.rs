@@ -1,3 +1,5 @@
+//! ダウンロードしたアーカイブをシステムの `tar` コマンドで展開する。
+
 use std::path::Path;
 use std::process::Command;
 

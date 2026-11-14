@@ -1,3 +1,5 @@
+//! キャッシュ・ダウンロード・検証・展開で発生するエラー型を定義する。
+
 use std::fmt;
 use std::io;
 use std::path::PathBuf;
