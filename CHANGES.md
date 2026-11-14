@@ -23,6 +23,8 @@
   - @voluntas
 - [UPDATE] クレートとモジュールのドキュメントコメントを追加する
   - @voluntas
+- [UPDATE] `build.rs` のパニックメッセージを英語にする
+  - @voluntas
 
 ## 4.4.0
 
