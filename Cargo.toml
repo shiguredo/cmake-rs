@@ -25,7 +25,9 @@ name = "cmake"
 path = "src/main.rs"
 
 [dependencies]
+# cmake クレートの Config を再エクスポートし、build 関数から cmake::build を呼ぶ
 cmake = "0.1"
 
 [build-dependencies]
+# build.rs で Cargo.toml をパースして CMake バージョンと SHA256 を取得する
 shiguredo_toml = "2026.2"

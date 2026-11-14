@@ -25,6 +25,8 @@
   - @voluntas
 - [UPDATE] `build.rs` のパニックメッセージを英語にする
   - @voluntas
+- [UPDATE] `Cargo.toml` の依存に用途コメントを追加する
+  - @voluntas
 
 ## 4.4.0
 
