@@ -27,6 +27,8 @@
   - @voluntas
 - [UPDATE] `Cargo.toml` の依存に用途コメントを追加する
   - @voluntas
+- [UPDATE] `prek.toml` の tombi を v1.7.1 に更新する
+  - @voluntas
 
 ## 4.4.0
 
