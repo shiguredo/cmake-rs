@@ -2,7 +2,7 @@
 name = "shiguredo_cmake"
 version = "4.4.4"
 edition = "2024"
-rust-version = "1.93"
+rust-version = "1.95"
 description = "Download and cache prebuilt CMake binaries from official GitHub releases"
 readme = "README.md"
 homepage = "https://github.com/shiguredo/cmake-rs"

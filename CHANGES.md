@@ -11,9 +11,15 @@
 
 ## main
 
-- [CHANGE] MSRV (rust-version) を 1.93 に上げる
+- [CHANGE] MSRV (rust-version) を 1.95 に上げる
   - @voluntas
 - [UPDATE] cmake 4.4.4 に上げる
+  - @voluntas
+
+### misc
+
+- [UPDATE] ツールチェーンを `rust-toolchain.toml` で MSRV の 1.95 に固定する
+  - CI は `rustup show` で MSRV のツールチェーンを導入し、rust-cache にも同じバージョンを指定する
   - @voluntas
 
 ## 4.4.0

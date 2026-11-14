@@ -1,3 +1,5 @@
+# MSRV と同じツールチェーンで cargo fmt / cargo clippy を実行するため、
+# rust-version と同じ値に固定する
 [toolchain]
-channel = "stable"
+channel = "1.95"
 components = ["rustfmt", "clippy"]
